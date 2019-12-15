@@ -203,7 +203,7 @@ $ ./setup03.sh block1
 
 ## Install OpenStack All in One
 
-- SSH with `root` user and run scripts
+- SSH with `root` user and run scripts, The All in One node will use as same as configure of controller node in out/vars
 
 ```sh
 $ source out/vars
