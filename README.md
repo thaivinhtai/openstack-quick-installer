@@ -51,7 +51,7 @@ Then execute `sudo netplan apply`
 
 # Step 2: Install OpenStack
 
-## Download script to all server
+## Download script to all servers
 - Login to root user, Download git & and clone scripts
 
 ```sh
