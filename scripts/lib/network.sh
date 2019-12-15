@@ -13,7 +13,7 @@ function _network_interfaces() {
     local EXT_IP=""
     local DATA_IP=""
 
-    if [ "$1" == "controller" ]; then
+    if [ "$1" == "controller" ] || [ "$1" == "all-in-one" ]; then
         MGNT_IP=$COM1_MGNT_IP
         EXT_IP=$COM1_EXT_IP
         DATA_IP=$COM1_DATA_IP
