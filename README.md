@@ -4,6 +4,7 @@ A small script used for deploy OpenStack Stein
 
 Supported OS:
 - Ubuntu Bionic Beaver 18.04 LTS
+- Ubuntu Eoan 19.04
 
 ## Topology
 
