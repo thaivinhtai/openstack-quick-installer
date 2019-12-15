@@ -1,0 +1,102 @@
+#!/bin/bash
+
+###################################################################################################
+# Network interfaces
+## Management Network
+export MGNT_INTERFACE=eth0
+## Tenant / xvlan Network
+export DATA_INTERFACE=eth1
+## Provider Network
+export EXT_INTERFACE=eth2
+
+## linuxbridge || openvswitch
+export NEUTRON_AGENT=linuxbridge
+
+## Assigning IP for CONTROLLER node
+export CTL_MGNT_IP=172.25.234.90
+export CTL_EXT_IP=192.168.81.165
+export CTL_DATA_IP=10.10.20.90
+
+## Assigning IP for COMPUTE1 node
+export COM1_MGNT_IP=172.25.234.100
+export COM1_EXT_IP=192.168.81.166
+export COM1_DATA_IP=10.10.20.100
+#
+## Assigning IP for COMPUTE2 node
+export COM2_MGNT_IP=172.25.234.101
+export COM2_EXT_IP=192.168.81.167
+export COM2_DATA_IP=10.10.20.101
+
+## Assigning IP for CINDER node
+export CIN_MGNT_IP=172.25.234.102
+export CIN_DATA_IP=10.10.20.102
+
+## Gateway for EXT network
+export GATEWAY_IP_EXT=192.168.81.1
+export NETMASK_ADD_EXT=255.255.255.0
+
+## Gateway for MGNT network
+export GATEWAY_IP_MGNT=172.25.234.1
+export NETMASK_ADD_MGNT=255.255.255.0
+
+## Gateway for DATA network
+export GATEWAY_IP_DATA=10.10.20.1
+export NETMASK_ADD_DATA=255.255.255.0
+
+## DNS server
+export DNS_IP="8.8.8.8"
+## NTP server
+export NTP_SERVER="europe.pool.ntp.org"
+
+###################################################################################################
+# OpenStack settings
+## OpenStack API endpoint (public IP or domain)
+export PUBLIC_FQDN_CTL=192.168.81.165
+export INTER_FDND_CTL=10.10.20.90
+# export PUBLIC_FQDN_CTL=192.168.81.90
+export MGNT_FQDN_CTL=172.25.234.90
+# export MGNT_FQDN_CTL=10.138.0.90
+export MGNT_FQDN_COM1=172.25.234.100
+export MGNT_FQDN_COM2=172.25.234.101
+export MGNT_FQDN_CIN1=172.25.234.102
+
+
+## Current OpenStack Region
+export REGION_NAME="CTU_01"
+
+###################################################################################################
+# Credentials variable
+export DEFAULT_PASS="admin"
+
+## Admin credentials
+export CREDENTIALS_ADMIN_USERNAME="admin"
+export CREDENTIALS_ADMIN_PASSWORD="admin"
+## Demo project credentials
+export CREDENTIALS_DEMO_USERNAME="admin"
+export CREDENTIALS_DEMO_PASSWORD="admin"
+
+## Internal services
+export RABBIT_PASS="$DEFAULT_PASS"
+export MYSQL_PASS="$DEFAULT_PASS"
+
+## OpenStack service credentials
+export KEYSTONE_PASS="admin"
+export GLANCE_PASS="admin"
+export NOVA_PASS="admin"
+export NEUTRON_PASS="admin"
+export PLACEMENT_PASS="admin"
+export METADATA_SECRET="db3c2f34-18c6-11ea-ad25-330a32b12066"
+export CINDER_PASS="admin"
+
+## OpenStack database credentials
+#Database password of Identity service
+export KEYSTONE_DBPASS="admin"
+#Database password for Image service
+export GLANCE_DBPASS="admin"
+#Database password for Compute service
+export NOVA_DBPASS="admin"
+export NOVA_API_DBPASS="admin"
+#Database password for the Networking service
+export NEUTRON_DBPASS="admin"
+#Database password for the Block Storage service
+export CINDER_DBPASS="admin"
